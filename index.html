@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/obs-websocket-js"></script>
+    <style>
+      .columnContainer {
+        padding-top: 5px;
+        display: flex;
+        float: left;
+        align-content: flex-start;
+      }
+
+      .column {
+        flex: 25%;
+        padding-right: 10px;
+      }
+
+      .SaveButton {
+        clear: both;
+      }
+
+      .SelectTeamsDiv {
+        padding-top: 5px;
+      }
+
+      input[type='number']{
+      width: 30px;
+      } 
+    </style>
+</head>
+<body>
+    <script defer src="main.js"></script>
+    <div class="OBSws"></div>
+    <div class="RLws"></div>
+    <br>
+    <label class="Title">Game Title:</label>
+        <input class="Title" id="Title" type="text">
+    <label class="BestOf">Best of:</label>
+      <select id="bestOf">
+        <option value="5">5</option>
+        <option value="7">7</option>
+      </select>
+    <label class="Music">Music:</label>
+      <select id="Music">
+        <option value="Gold">Gold</option>
+        <option value="Contra">Contra</option>
+        <option value="Weapon">Weapon</option>
+        <option value="Move On">Move on</option>
+        <option value="Skyforth">Skyforth</option>
+        <option value="Bust It Out">Bust It Out</option>
+        <option value="Color">Color</option>
+        <option value="Runnin">Runnin</option>
+        <option value="New World">New World</option>
+        <option value="Heat Wave">Heat Wave</option>
+        <option value="Castaway">Castaway</option>
+      </select>
+    <label class="Random">Randomize:</label>
+        <input class="RandomCheck" id="RandomCheck" type="checkbox">
+    <br>
+    <div class="SelectTeamsDiv" id="SelectTeamsDiv">
+        <label>Team 1:</label>
+          <select id="team1List">
+            <option value="Atlas">Atlas</option>
+            <option value="Barons">Barons</option>
+            <option value="Flyers">Flyers</option>
+            <option value="Inferno">Inferno</option>
+            <option value="Lumberjacks">Lumberjacks</option>
+            <option value="Maulers">Maulers</option>
+            <option value="Miracles">Miracles</option>
+            <option value="Rangers">Rangers</option>
+            <option value="Rhythm">Rhythm</option>
+            <option value="Senators">Senators</option>
+            <option value="Superiors">Superiors</option>
+            <option value="Victory">Victory</option>
+          </select>
+          <label>Score</label>
+            <input class="Score1" id="Score1" type="number" min="0" value="0">
+          <label>Team 2:</label>
+          <select id="team2List">
+            <option value="Atlas">Atlas</option>
+            <option value="Barons">Barons</option>
+            <option value="Flyers">Flyers</option>
+            <option value="Inferno">Inferno</option>
+            <option value="Lumberjacks">Lumberjacks</option>
+            <option value="Maulers">Maulers</option>
+            <option value="Miracles">Miracles</option>
+            <option value="Rangers">Rangers</option>
+            <option value="Rhythm">Rhythm</option>
+            <option value="Senators">Senators</option>
+            <option value="Superiors">Superiors</option>
+            <option value="Victory">Victory</option>
+          </select>
+          <label>Score</label>
+            <input class="Score2" id="Score2" type="number" min="0" value="0">
+        <br>
+        <div class="columnContainer">
+          <div class="column" id="Team1Players">
+            <label>Team 1 Players:</label>
+            <br>
+              <input class="Team1PlayerNames" id="Player1Name" type="text">
+              <br>
+              <input class="Team1PlayerNames" id="Player2Name" type="text">
+              <br>
+              <input class="Team1PlayerNames" id="Player3Name" type="text">
+          </div>
+          <div class="column" id="Team1Cams">
+            <label>Cams:</label>
+            <br>
+              <input class="Team1PlayerCams" id="Player1Cam" type="text">
+              <br>
+              <input class="Team1PlayerCams" id="Player2Cam" type="text">
+              <br>
+              <input class="Team1PlayerCams" id="Player3Cam" type="text">
+          </div>
+          <div class="column" id="Team2Players">
+            <label>Team 2 Players:</label>
+            <br>
+              <input class="Team2PlayerNames" id="Player4Name" type="text">
+              <br>
+              <input class="Team2PlayerNames" id="Player5Name" type="text">
+              <br>
+              <input class="Team2PlayerNames" id="Player6Name" type="text">
+          </div>
+          <div class="column" id="Team2Cams">
+            <label>Cams:</label>
+            <br>
+              <input class="Team2PlayerCams" id="Player4Cam" type="text">
+              <br>
+              <input class="Team2PlayerCams" id="Player5Cam" type="text">
+              <br>
+              <input class="Team2PlayerCams" id="Player6Cam" type="text">
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="SaveButton">
+        <br>
+        <button id="Save">Save</button>
+      </div>
+</body>
+</html>
