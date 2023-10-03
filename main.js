@@ -1,6 +1,6 @@
 let url = document.currentScript.src
-//let filePath = url.slice(8).slice(0, -7)
-let filePath = "D:/VsCodeProjects/RLOverlay/OBSRLOverlay/"
+let filePath = url.slice(8).slice(0, -7)
+//let filePath = "D:/VsCodeProjects/RLOverlay/OBSRLOverlay/"
 
 
 console.log(filePath);
